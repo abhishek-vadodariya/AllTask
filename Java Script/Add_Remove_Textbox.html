@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add & Remove TextBox</title>
+
+		<script type="text/javascript">
+
+			function GetTextBox(value)
+			{
+	    		return '<input name = "DynamicTextBox" id="DynamicTextBox" type="text" value = "' + value + '" />' +
+	            '<input type="button" value="Remove" onclick = "RemoveTextBox(this)" />'+
+	            '<input type="button" value="Add" onclick = "AddTextBox(this)" />'
+			}
+
+			function AddTextBox() 
+			{
+	    		let div = document.createElement('DIV');
+	    		div.innerHTML = GetTextBox("");
+	    		div.setAttribute("id","Mydiv");
+	    		document.getElementById("TextBoxContainer").appendChild(div);
+			}
+	 
+			function RemoveTextBox(div) 
+			{
+	    		document.getElementById("TextBoxContainer").removeChild(div.parentNode);
+			}
+	 
+			function DynamicTextboxes() 
+			{
+	    		let values = eval('<%=Values%>');
+	    		if (values != null) 
+	    		{
+	        		let html = "";
+	        		for (let i = 0; i < values.length; i++) 
+	        		{
+	            		html += "<div>" + GetTextBox(values[i]) + "</div>";
+	        		}
+	        	document.getElementById("TextBoxContainer").innerHTML = html;
+	    		}
+			}
+			window.onload = DynamicTextboxes;
+
+			function Post() 
+			{
+				
+				document.getElementById("sub").innerHTML = " ";
+				let text = document.getElementById("DynamicTextBox").value;
+				//alert(text);
+				document.getElementById("sub").innerHTML=text;
+
+				let length=0;
+				for(let i =0; i<text.rows.length; i++)
+				{
+					let txtadd = text.rows.item(i).cells;
+
+					for(let j =0; j<txtadd.length; j++)
+					{
+						sub.innerHTML = sub.innerHTML + ' ' + txtadd.item(j).innerHTML;
+					}
+					sub.innerHTML = sub.innerHTML + ' <br/> '; 
+				} 
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<form id="form1" runat="server">
+			<input id="btnAdd" type="button" value="AddTextBox" onclick="AddTextBox()" />
+
+			<div id="TextBoxContainer"></div>	
+
+			<input id="btnpost" type="button" value="Post" onclick="Post()" />
+			<p id="sub"> </p>
+		</form>
+	</body>
+</html>
