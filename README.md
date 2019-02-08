@@ -1,7 +1,10 @@
 # AllTask
 
-<h4> HTML :- Template using HTML, CSS And Bootstrap(Only use Div class like Container and size classes).</h4>
-
+<h4> HTML :- </h4>
+          <ul>
+          <li>Responsive Template using HTML, CSS And Bootstrap.</li>
+          </ul>
+          
 <h4>Java script :- </h4>
           <ul>
             <li>1) Add & Remove TextBox :- Add dynamic text box and remove and Dispaly contain.</li>
