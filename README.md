@@ -1,10 +1,18 @@
 # AllTask
 
-HTML :- Template using HTML, CSS And Bootstrap(Only use Div class like Container and size classes).
+<h4> HTML :- Template using HTML, CSS And Bootstrap(Only use Div class like Container and size classes).</h4>
 
-Java script :- 1) Add & Remove TextBox :- Add dynamic text box and remove and Dispaly contain.
-               2) Opps Demo :- Fingerprint Sensor supported in your phone or not.
-               3) Object & Key :- Add a String And Number in Array and print the count and String.
-               
-Linux Sell Script :- Exercise 1(linux Command(doc. file))
-                     Exercise 2(Scripting (doc. file))
+<h4>Java script :- </h4>
+          <ul>
+            <li>1) Add & Remove TextBox :- Add dynamic text box and remove and Dispaly contain.</li>
+            <li>2) Opps Demo :- Fingerprint Sensor supported in your phone or not.</li>
+            <li> 3) Object & Key :- Add a String And Number in Array and print the count and String.</li>
+          </ul>
+              
+<h4>Linux Sell Script :-</h4>
+                  <ul>
+                    <li>Exercise 1(linux Command(doc. file)).</li>
+                    <li>Exercise 2(Scripting (doc. file)).</li>
+                  </ul>
+                     
+                     
