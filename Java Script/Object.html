@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OBJECT AND KEY</title>
+	<script type="text/javascript">
+		
+
+		let arr = [	10,
+				   	20,
+					"Hi",
+					"Abhi",
+				{ 	
+					a:
+					{	
+						b:function(){return (10+20)}, 
+						c: "Hello",
+						d: 10
+					}
+				}
+			];
+			let res=[];
+			let count=1;
+			for(i=0;i<arr.length;i++) 
+			{
+				let obj= {};	
+				if(typeof(arr[i])=="number") 
+				{
+					obj["key"]=arr[i];
+					obj["count"]=count+arr[i];
+					count++;
+					res.push(obj);
+				} 
+				else if(typeof(arr[i])=="string") 
+				{
+					obj["key"]=arr[i];
+					obj["name"]=arr[i];
+					res.push(obj);
+					
+				} 
+				else if(typeof(arr[i])=="object") 
+				{
+					for(let k in arr[i])
+					{	
+						obj={};
+						
+						obj["key"]=k;
+						for(let j in arr[i][k])
+						{
+							alert(j);
+							obj[j]=arr[i][k][j];				
+						}	
+						res.push(obj);
+					}
+				}
+			}
+			console.log(res);
+			alert(res);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
